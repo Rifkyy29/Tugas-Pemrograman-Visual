@@ -23,9 +23,9 @@ class FormValidationApp(QWidget):
         self.phone_input.setInputMask("+62 000 0000 0000")
         self.address_input = QTextEdit()
         self.gender_input = QComboBox()
-        self.gender_input.addItems([" ", "Male", "Female", "Other"])
+        self.gender_input.addItems(["", "Male", "Female", "Other"])
         self.education_input = QComboBox()
-        self.education_input.addItems([" ", "High School", "Diploma", "Bachelor", "Master", "PhD"])
+        self.education_input.addItems(["", "High School", "Diploma", "Bachelor", "Master", "PhD"])
 
         self.save_btn = QPushButton("Save")
         self.clear_btn = QPushButton("Clear")
@@ -56,7 +56,7 @@ class FormValidationApp(QWidget):
         education = self.education_input.currentText()
 
         if not all([name, email, age, phone, address]) or \
-        gender == "Select Gender" or education == "Select Education":
+        gender == "" or education == "":
             self.show_message("All field are required.")
             return
 
