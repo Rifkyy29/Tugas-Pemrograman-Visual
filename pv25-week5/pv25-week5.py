@@ -70,6 +70,11 @@ class FormValidationApp(QWidget):
             self.show_message("Please enter a valid 13 digit phone number.")
             return
 
+        address_parts = [part.strip() for part in address.split(',')]
+        if len(address_parts) != 4 or not all(address_parts):
+            self.show_message("Address must follow format: desa, kecamatan, kabupaten, provinsi.")
+            return
+            
         self.show_message("Profile saved successfully.", QMessageBox.Information)
         self.clear_form()
 
