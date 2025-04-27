@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ToDoListApp</class>
+ <widget class="QMainWindow" name="ToDoListApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>To Do List</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_nama">
+      <property name="text">
+       <string>NIM: F1D022077 | Nama: Muhammad Rifkyandryan Rustanto</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>font-weight: bold; font-size: 14px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCalendarWidget" name="calendar"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="inputLayout">
+      <item>
+       <widget class="QTimeEdit" name="time_edit"/>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="task_input">
+        <property name="placeholderText">
+         <string>Masukkan aktivitas</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="priority_combo">
+        <item>
+         <property name="text">
+          <string>Biasa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Prioritas</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="add_task_btn">
+        <property name="text">
+         <string>Tambah Aktivitas</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabSemuaAktivitas">
+       <attribute name="title">
+        <string>Semua Aktivitas</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutSemuaAktivitas">
+        <item>
+         <widget class="QScrollArea" name="scrollAreaSemua">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollWidgetSemua">
+           <layout class="QVBoxLayout" name="scrollLayoutSemua"/>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabBelumSelesai">
+       <attribute name="title">
+        <string>Belum Selesai</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutBelumSelesai">
+        <item>
+         <widget class="QScrollArea" name="scrollAreaBelum">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollWidgetBelum">
+           <layout class="QVBoxLayout" name="scrollLayoutBelum"/>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabSudahSelesai">
+       <attribute name="title">
+        <string>Sudah Selesai</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutSudahSelesai">
+        <item>
+         <widget class="QScrollArea" name="scrollAreaSudah">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollWidgetSudah">
+           <layout class="QVBoxLayout" name="scrollLayoutSudah"/>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
